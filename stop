@@ -1,0 +1,4 @@
+#!/bin/bash
+sudo airmon-ng stop wlp2s0mon
+sudo service network-manager start
+

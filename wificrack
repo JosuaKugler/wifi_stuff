@@ -1,0 +1,9 @@
+#!/bin/bash
+#Script for activating monitor mode and doing several nice things
+#sudo iwlist wlp2s0 scan
+sudo airmon-ng check kill
+sudo airmon-ng start wlp2s0
+#put content in here, wlp2s0mon is in monitor mode
+sudo airodump-ng wlp2s0mon
+sudo airmon-ng stop wlp2s0mon
+sudo service network-manager start

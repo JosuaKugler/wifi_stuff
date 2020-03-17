@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sudo airmon-ng check kill
+sudo airmon-ng start wlp2s0
+sudo airodump-ng -c 1 wlp2s0mon
+

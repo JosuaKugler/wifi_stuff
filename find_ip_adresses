@@ -1,0 +1,4 @@
+#!/bin/bash
+routername=$1
+sudo airodump-ng -w bssidfile -c 1 wlp2s0mon
+python3 get_bssid_from_csv.py $routername
